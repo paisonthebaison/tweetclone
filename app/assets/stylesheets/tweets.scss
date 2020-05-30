@@ -1,0 +1,135 @@
+@mixin width {
+  width: 750px;
+  margin: 0 auto;
+}
+.header{
+    @include width;
+    height: 50px;
+    position:relative;
+    a{
+      text-decoration: none;
+      color:black;
+    }
+    h1{
+      position:absolute;
+      // top:50%; 
+      // left:50%;
+      font-weight: bold;
+      font-size: 23px;
+      span{
+        color:blue;
+      }
+    }
+    a.post{
+      font-weight: bold;
+      font-size: 23px;
+      position:absolute;
+      // top:50%;
+      right:0;
+    }
+  
+}
+
+.contents{
+  @include width;
+  &__post{
+    height:420px;
+    position:relative;
+    margin-bottom: 20px;
+    .more{
+      position: absolute;
+      top: 10px;
+      right: 9px;
+      width: 81px;
+      text-align: center;
+      p.arrow{
+        text-align:center;
+        img{
+          color:black;
+        }
+      }
+      ul{
+        padding: 2px;
+        display:none;
+        text-align: center;
+        width: 80px;
+        border-radius: 5px;
+        background-color:rgb(212, 209, 209);
+        box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
+        li{
+          margin-bottom: 6px;
+          a{
+            text-decoration:none;
+            color:black;
+          }
+          a:hover{
+            color:skyblue;
+          }
+        }
+      }
+    }
+    &__textAndName{
+      position:absolute;
+      bottom:10px;
+      left:10px;
+      
+    }
+      
+  }
+}
+
+@mixin form-size {
+  width: 100%; 
+  padding: 10px 15px; 
+  font-size: 16px;
+  border-radius: 3px; 
+  border: 2px solid #ddd;
+  box-sizing: border-box; 
+}
+.newForm input{
+  display: block;
+  @include form-size;
+}
+textarea.newTextarea{
+  @include form-size;
+}
+h3.postTitle{
+  text-align:center;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+.sendBtn{
+  background-color: skyblue;
+}
+
+.success{
+  @include width;
+  margin-top: 50px;
+  margin-bottom: 100px;
+  h3{
+    text-align:center;
+    font-weight:bold;
+    font-size: 20px;
+  }
+  a.btn{
+    display:block;
+    margin:0 auto;
+    text-decoration:none;
+    color:black;
+    text-align: center;
+    display: block;
+    margin-top: 40px;
+  }
+  a.btn:hover{
+    color:skyblue;
+  }
+}
+
+footer{
+  @include width;
+  margin-top: 20px;
+  p{
+    text-align:center;
+  }
+}
