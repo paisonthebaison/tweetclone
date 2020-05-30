@@ -1,8 +1,8 @@
 <div class="contents row">
   <% @tweets.each do |tweet| %>
-    <div class="content_post" style="background-image: url(<%= tweet.image %>);">  
+    <div class="contents__post" style="background-image: url(<%= tweet.image %>);background-repeat: no-repeat;width:100%;background-size: cover;">
       <div class="more">
-        <span><%= image_tag 'arrow_top.png' %></span>
+        <p class="arrow"><%= image_tag 'arrow_top.png' %></p>
         <ul class="more_list">
           <li>
             <%= link_to 'detail', "/tweets/#{tweet.id}", method: :get %>
@@ -15,11 +15,12 @@
           </li>
         </ul>
       </div>
-
-      <%= simple_format(tweet.text) %>
-      <span class="name">
-        <%= tweet.name %>
-      </span>
+      <div class="contents__post__textAndName">
+        <p class="contents__post__textAndName__text"><%= simple_format(tweet.text) %></p>
+        <p class="contents__post__textAndName__name">
+          <%= tweet.name %>
+        </p>
+      </div>
     </div>
   <% end %>
 </div>
