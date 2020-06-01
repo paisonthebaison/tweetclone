@@ -7,13 +7,35 @@
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <script src="https://kit.fontawesome.com/b7fa19eeed.js" crossorigin="anonymous"></script>
     
   </head>
 
   <body>
     <header class="header">
-      <h1 class="grid-6"><a href="/"><span>Tweet</span>clone</a></h1>
-      <a class="post" href="/tweets/new">post</a>
+      <h1><a href="/">My blog</a></h1>
+      <% if user_signed_in? %>
+          <div class="postBtn">
+            <%= link_to "/tweets/new" do%>
+              <i class="fas fa-pencil-alt fa-lg"></i>
+            <% end %>
+          </div>
+          <div class="user_nav">
+            <p class="nickname"><%= current_user.nickname %><span><i class="fas fa-angle-down fa-lg"></i></span></p>
+            <ul class="user__info" id="user-info">
+              <li>
+                <%= link_to "My Page", "/users/#{current_user.id}" %>
+                <%= link_to "Logout", destroy_user_session_path, method: :delete %>
+              </li>
+            </ul>
+            
+          </div>
+      <% else %>
+        <div class="logOut-info">
+          <%= link_to "Login", new_user_session_path, class: 'login' %>
+          <%= link_to "Register", new_user_registration_path, class: 'register' %>
+        </div>
+      <% end %>
     </header>
 
     <%= yield %>

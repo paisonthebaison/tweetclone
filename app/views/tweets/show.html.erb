@@ -14,7 +14,9 @@
       <div class="contents__post__textAndName">
         <p class="contents__post__textAndName__text"><%= simple_format(@tweet.text) %></p>
         <p class="contents__post__textAndName__name">
-          <%= @tweet.name %>
+          <a href="/users/<%= @tweet.user.id %>">
+            <span>投稿者</span><%= @tweet.user.nickname %>
+          </a>
         </p>
       </div>
     </div>

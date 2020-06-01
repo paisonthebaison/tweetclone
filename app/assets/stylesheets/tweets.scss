@@ -2,36 +2,90 @@
   width: 750px;
   margin: 0 auto;
 }
+@mixin btn{
+  background-color:#404040;
+  color:white;
+  padding: 4px;
+  &:hover{
+  background-color:#996600;
+}
+}
 .header{
     @include width;
-    height: 50px;
+    height: 60px;
     position:relative;
+     .postBtn{
+      position:fixed;
+      bottom: 58px;
+      right: 235px;
+      z-index:1;
+      a{
+        color: #fff;
+        background-color:skyblue;
+        padding: 0;
+        margin: 0;
+        width: 70px;
+        height: 70px;
+        line-height: 70px;
+        text-align: center;
+        display: inline-block;
+        border-radius: 50%;
+      }
+      .fas{
+        color:white;
+      }
+    }
     a{
       text-decoration: none;
       color:black;
     }
     h1{
-      position:absolute;
-      // top:50%; 
-      // left:50%;
       font-weight: bold;
       font-size: 23px;
-      span{
-        color:blue;
+      text-align: center;
+    }
+    .user_nav{
+      font-weight: bold;
+      font-size: 17px;
+      width:110px;
+       i.fas{
+         color:black;
+         margin-left: 10px;
+       }
+        p.nickname{
+          display: block;
+          width: 100px;
+          text-align: center;
+        }
+        ul.user__info{
+          display:none;
+          z-index: 10;
+          position:relative;
+          width: 100px;
+          li{
+            a{
+              display:block;
+              text-align: center;
+              margin-bottom: 1px;
+            }
+          }
+        }
+      a{
+        @include btn;
       }
+
     }
-    a.post{
-      font-weight: bold;
-      font-size: 23px;
-      position:absolute;
-      // top:50%;
-      right:0;
+  .logOut-info{
+    display:flex;
+    a.register{
+     margin-left:5px;
     }
-  
+  }
 }
 
 .contents{
   @include width;
+  z-index: -1;
   &__post{
     height:420px;
     position:relative;
