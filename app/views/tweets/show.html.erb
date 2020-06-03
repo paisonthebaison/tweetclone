@@ -17,9 +17,29 @@
         <p class="contents__post__textAndName__text"><%= simple_format(@tweet.text) %></p>
         <p class="contents__post__textAndName__name">
           <a href="/users/<%= @tweet.user.id %>">
-            <span>投稿者</span><%= @tweet.user.nickname %>
+            <span>Nickname: </span><%= @tweet.user.nickname %>
           </a>
         </p>
       </div>
     </div>
+  <div class="container">
+    <% if current_user %>
+      <%= form_with(model: [@tweet, @comment], local: true) do |form| %>
+        <%= form.text_area :text, placeholder: "Write comments here", rows: "2", class: 'comments' %>
+        <%= form.submit "SEND", class: 'comments-send' %>
+      <% end %>
+    <% else %>
+      <strong><p class="comment-restriction">- You need to Login or Register to make comments -</p></strong>
+    <% end %>
+    <div class="comments">
+      <h4>＜Comments-list＞</h4>
+      <% if @comments %>
+        <% @comments.each do |comment| %>
+          <p>
+            <strong><%= link_to comment.user.nickname, "/users/#{comment.user_id}" %>：</strong>
+            <%= comment.text %>
+          </p>
+        <% end %>
+      <% end %>
+  </div>
 </div>

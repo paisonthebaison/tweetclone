@@ -25,7 +25,7 @@ body{
       z-index:1;
       a{
         color: #fff;
-        background-color:skyblue;
+        background-color:#cc9966;
         padding: 0;
         margin: 0;
         width: 70px;
@@ -128,7 +128,7 @@ body{
             color:black;
           }
           a:hover{
-            color:skyblue;
+            color:white;
           }
         }
       }
@@ -137,7 +137,14 @@ body{
       position:absolute;
       bottom:10px;
       left:10px;
-      
+      a{
+        text-decoration: none;
+        color:black;
+        &:hover{
+          color:blue;
+        }
+      }
+
     }
       
   }
@@ -188,6 +195,25 @@ h3.postTitle{
   }
   a.btn:hover{
     color:skyblue;
+  }
+}
+.container{
+  p.comment-restriction{
+    color:red;
+    text-align:center;
+  }
+  textarea.comments{
+    display: block;
+    @include form-size;
+  }
+  input.comments-send{
+    @include form-size;
+    background-color:#e6e6e6;
+    margin-top:3px;
+    &:hover{
+      background-color: #8c8c8c;
+      color:white;
+    }
   }
 }
 
