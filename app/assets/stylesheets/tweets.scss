@@ -14,10 +14,27 @@ body{
 }
 }
 
+.search-form{
+  @include width;
+  text-align:center;
+  input.search-input{
+    width:40%;
+    height:30px;
+    border:1px solid #707070;
+  }
+  .search-btn{
+    background-color: rgba(245, 169, 7, 0.87);
+    width: 50px;
+    height: 33px;
+    font-size: 15px;
+    color:rgb(43, 41, 41);
+  }
+}
 .header{
-    @include width;
     height: 60px;
     position:relative;
+    border-bottom: 1px solid #909090;
+    margin-bottom: 20px;
      .postBtn{
       position:fixed;
       bottom: 58px;
@@ -49,37 +66,43 @@ body{
       font-size: 23px;
       text-align: center;
       padding-top: 10px;
+      a:hover{
+          color: #31A9EE;
+      }
     }
-    .user_nav{
-      font-weight: bold;
-      font-size: 17px;
-      width:110px;
-       i.fas{
-         color:black;
-         margin-left: 10px;
-       }
-        p.nickname{
-          display: block;
-          width: 100px;
-          text-align: center;
-        }
-        ul.user__info{
-          display:none;
-          z-index: 10;
-          position:relative;
-          width: 100px;
-          li{
-            a{
-              display:block;
-              text-align: center;
-              margin-bottom: 1px;
+    .user-nav-wrapper{
+      @include width;
+      .user_nav{
+        font-weight: bold;
+        font-size: 17px;
+        width:110px;
+         i.fas{
+           color:black;
+           margin-left: 10px;
+         }
+          p.nickname{
+            display: block;
+            width: 100px;
+            text-align: center;
+          }
+          ul.user__info{
+            display:none;
+            z-index: 10;
+            position:relative;
+            width: 100px;
+            li{
+              a{
+                display:block;
+                text-align: center;
+                margin-bottom: 1px;
+              }
             }
           }
+        a{
+          @include btn;
         }
-      a{
-        @include btn;
+  
       }
-
     }
   .logOut-info{
     display:flex;
@@ -118,11 +141,11 @@ body{
         display:none;
         text-align: center;
         width: 80px;
-        border-radius: 5px;
         background-color:rgb(212, 209, 209);
         box-shadow: 0 10px 25px 0 rgba(0, 0, 0, .5);
         li{
-          margin-bottom: 6px;
+          line-height: 1.5rem;
+          border-bottom: 1px solid rgb(236, 143, 143);
           a{
             text-decoration:none;
             color:black;
