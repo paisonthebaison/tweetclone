@@ -13,6 +13,9 @@ body{
   background-color:#996600;
 }
 }
+span.picture>input{
+  // display:none;
+}
 
 .search-form{
   @include width;
