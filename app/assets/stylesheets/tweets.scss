@@ -13,6 +13,9 @@ body{
   background-color:#996600;
 }
 }
+span.picture>input{
+  // display:none;
+}
 
 .search-form{
   @include width;
@@ -106,6 +109,8 @@ body{
     }
   .logOut-info{
     display:flex;
+    width:750px;
+    margin:0 auto;
     a.register{
     
      margin-left:5px;
