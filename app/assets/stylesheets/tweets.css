@@ -1,0 +1,291 @@
+body {
+  font-family: 'PT Sans', sans-serif;
+}
+
+.search-form {
+  width: 750px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.search-form input.search-input {
+  width: 40%;
+  height: 30px;
+  border: 1px solid #707070;
+}
+
+.search-form .search-btn {
+  background-color: rgba(245, 169, 7, 0.87);
+  width: 50px;
+  height: 33px;
+  font-size: 15px;
+  color: #2b2929;
+}
+
+.header {
+  height: 60px;
+  position: relative;
+  border-bottom: 1px solid #909090;
+  margin-bottom: 20px;
+}
+
+.header .postBtn {
+  position: fixed;
+  bottom: 58px;
+  right: 235px;
+  z-index: 1;
+}
+
+.header .postBtn a {
+  color: #fff;
+  background-color: #cc9966;
+  padding: 0;
+  margin: 0;
+  width: 70px;
+  height: 70px;
+  line-height: 70px;
+  text-align: center;
+  display: inline-block;
+  border-radius: 50%;
+}
+
+.header .postBtn .fas {
+  color: white;
+}
+
+.header a {
+  text-decoration: none;
+  color: black;
+}
+
+.header h1 {
+  font-family: 'PT Sans', sans-serif;
+  font-weight: bold;
+  font-size: 23px;
+  text-align: center;
+  padding-top: 10px;
+}
+
+.header h1 a:hover {
+  color: #31A9EE;
+}
+
+.header .user-nav-wrapper {
+  width: 750px;
+  margin: 0 auto;
+}
+
+.header .user-nav-wrapper .user_nav {
+  font-weight: bold;
+  font-size: 17px;
+  width: 110px;
+}
+
+.header .user-nav-wrapper .user_nav i.fas {
+  color: black;
+  margin-left: 10px;
+}
+
+.header .user-nav-wrapper .user_nav p.nickname {
+  display: block;
+  width: 100px;
+  text-align: center;
+}
+
+.header .user-nav-wrapper .user_nav ul.user__info {
+  display: none;
+  z-index: 10;
+  position: relative;
+  width: 100px;
+}
+
+.header .user-nav-wrapper .user_nav ul.user__info li a {
+  display: block;
+  text-align: center;
+  margin-bottom: 1px;
+}
+
+.header .user-nav-wrapper .user_nav a {
+  background-color: #404040;
+  color: white;
+  padding: 4px;
+}
+
+.header .user-nav-wrapper .user_nav a:hover {
+  background-color: #996600;
+}
+
+.header .logOut-info {
+  display: flex;
+  width: 750px;
+  margin: 0 auto;
+}
+
+.header .logOut-info a.register {
+  margin-left: 5px;
+}
+
+.contents {
+  width: 750px;
+  margin: 0 auto;
+  z-index: -1;
+  margin-top: 10px;
+}
+
+.contents__post {
+  height: 420px;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.contents__post .more {
+  position: absolute;
+  top: 10px;
+  right: 9px;
+  width: 81px;
+  text-align: center;
+}
+
+.contents__post .more p.arrow {
+  text-align: center;
+}
+
+.contents__post .more p.arrow img {
+  color: black;
+}
+
+.contents__post .more ul {
+  padding: 2px;
+  display: none;
+  text-align: center;
+  width: 80px;
+  background-color: #d4d1d1;
+  box-shadow: 0 10px 25px 0 rgba(0, 0, 0, 0.5);
+}
+
+.contents__post .more ul li {
+  line-height: 1.5rem;
+  border-bottom: 1px solid #ec8f8f;
+}
+
+.contents__post .more ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.contents__post .more ul li a:hover {
+  color: white;
+}
+
+.contents__post__textAndName {
+  position: absolute;
+  bottom: 10px;
+  left: 10px;
+}
+
+.contents__post__textAndName a {
+  text-decoration: none;
+  color: black;
+}
+
+.contents__post__textAndName a:hover {
+  color: blue;
+}
+
+.newForm input {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 2px solid #ddd;
+  box-sizing: border-box;
+}
+
+textarea.newTextarea {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 2px solid #ddd;
+  box-sizing: border-box;
+}
+
+h3.postTitle {
+  text-align: center;
+  margin-bottom: 10px;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.sendBtn {
+  background-color: skyblue;
+}
+
+.success {
+  width: 750px;
+  margin: 0 auto;
+  margin-top: 50px;
+  margin-bottom: 100px;
+}
+
+.success h3 {
+  text-align: center;
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.success a.btn {
+  display: block;
+  margin: 0 auto;
+  text-decoration: none;
+  color: black;
+  text-align: center;
+  display: block;
+  margin-top: 40px;
+}
+
+.success a.btn:hover {
+  color: skyblue;
+}
+
+.container p.comment-restriction {
+  color: red;
+  text-align: center;
+}
+
+.container textarea.comments {
+  display: block;
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 2px solid #ddd;
+  box-sizing: border-box;
+}
+
+.container input.comments-send {
+  width: 100%;
+  padding: 10px 15px;
+  font-size: 16px;
+  border-radius: 3px;
+  border: 2px solid #ddd;
+  box-sizing: border-box;
+  background-color: #e6e6e6;
+  margin-top: 3px;
+}
+
+.container input.comments-send:hover {
+  background-color: #8c8c8c;
+  color: white;
+}
+
+footer {
+  width: 750px;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+footer p {
+  text-align: center;
+}
