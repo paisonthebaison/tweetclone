@@ -68,3 +68,4 @@ gem 'devise'
 gem 'kaminari'
 gem 'carrierwave'
 gem 'mini_magick'
+gem 'pg', group: :production
