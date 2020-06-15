@@ -17,6 +17,24 @@ span.picture>input{
   // display:none;
 }
 
+.user{
+  width:156px;
+  margin:0 auto;
+  h2{
+    text-align: center;
+    margin-bottom: 20px;
+    font-weight: bold;
+    font-size: 20px;
+    color: blue;
+  }
+  input{
+    margin-bottom:3px;
+  }
+  input#user_nickname{
+    width:166px;
+  }
+}
+
 .search-form{
   @include width;
   text-align:center;
